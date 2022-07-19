@@ -1,0 +1,26 @@
+body{
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    background-color: #f7ecde;
+}
+h5{
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+}
+.headings{
+    border: 2px #c46a00 ;
+    color:white;
+    background-color:#c46a00 ;
+    display: inline-block;
+}
+.headings:hover{
+    background-color: #df7701 ;
+    color:white;
+}
+.chef p{
+    font-weight: 600;
+    padding-top: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    color: darkblue;
+}
