@@ -3,16 +3,16 @@
 $host="localhost";
 $user="root";
 $password="";
-$db="customer_information";
+$db_name="customers_info";
 
-mysql_connect($host,$user,$password);
-mysql_select_db($db);
+mysqli_connect($host,$user,$password);
+mysqli_select_db($db_name);
 
-if(isset($_POST['full_name'])){
+if(isset($_POST[''])){
     
     $full_name=$_POST['full_name'];
     $password=$_POST['password'];    
-    $sql="select * from tbl_customer_guest where user='".$full_name."'AND Pass='".$password."' limit 1";    
+    $sql="select * from tbl_guest_customer where user='".$full_name."'AND Pass='".$password."' limit 1";    
     $result=mysql_query($sql);
     
     if(mysql_num_rows($result)==1){
@@ -37,14 +37,18 @@ if(isset($_POST['full_name'])){
 </head>
 <body>
 
-<div method="POST" action="#" class="section">
-	<div class="container">
+<div method="_POST" action="#" class="section">
+	<div method="_POST" action="#" class="container">
 		<div class="row full-height justify-content-center">
 			<div class="col-12 text-center align-self-center py-5">
 				<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+						<h6 class="mb-0 pb-3">
+						 <span>Log In </span>
+						 <span>Sign Up</span>
+					    </h6>
 			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
 			          	<label for="reg-log"></label>
+
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
 								<div class="card-front">
@@ -52,11 +56,11 @@ if(isset($_POST['full_name'])){
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Log In</h4>
 											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+												<input type="email" name="Email" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+												<input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 											<a href="#" class="btn mt-4">submit</a>
@@ -64,20 +68,20 @@ if(isset($_POST['full_name'])){
 				      					</div>
 			      					</div>
 			      				</div>
-								<div class="card-back">
+								<div method="_POST" action="#" class="card-back">
 									<div class="center-wrap">
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Sign Up</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+												<input type="text" name="full_name" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+												<input type="email" name="Email" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+												<input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 											<a href="#" class="btn mt-4">submit</a>
